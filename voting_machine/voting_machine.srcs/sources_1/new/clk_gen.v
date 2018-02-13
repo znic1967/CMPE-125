@@ -22,5 +22,6 @@ module clk_gen
             end
             count1 = count1 + 1;
             count2 = count2 + 1;
-       end
-end
+            end
+    end
+endmodule
