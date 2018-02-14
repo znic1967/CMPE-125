@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='D:/Code/CMPE-125/voting_machine2/voting_machine2.runs/impl_1'
+HD_PWD='D:/Code/CMPE-125/voting_machine/voting_machine.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

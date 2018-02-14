@@ -68,12 +68,12 @@ set rc [catch {
   create_project -in_memory -part xc7a100tcsg324-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir D:/Code/CMPE-125/voting_machine2/voting_machine2.cache/wt [current_project]
-  set_property parent.project_path D:/Code/CMPE-125/voting_machine2/voting_machine2.xpr [current_project]
-  set_property ip_output_repo D:/Code/CMPE-125/voting_machine2/voting_machine2.cache/ip [current_project]
+  set_property webtalk.parent_dir D:/Code/CMPE-125/voting_machine/voting_machine.cache/wt [current_project]
+  set_property parent.project_path D:/Code/CMPE-125/voting_machine/voting_machine.xpr [current_project]
+  set_property ip_output_repo D:/Code/CMPE-125/voting_machine/voting_machine.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  add_files -quiet D:/Code/CMPE-125/voting_machine2/voting_machine2.runs/synth_1/voting_machine_fpga.dcp
-  read_xdc D:/Code/CMPE-125/voting_machine2/voting_machine2.srcs/constrs_1/new/voting_machine_fpga.xdc
+  add_files -quiet D:/Code/CMPE-125/voting_machine/voting_machine.runs/synth_1/voting_machine_fpga.dcp
+  read_xdc D:/Code/CMPE-125/voting_machine/voting_machine.srcs/constrs_1/new/voting_machine_fpga.xdc
   link_design -top voting_machine_fpga -part xc7a100tcsg324-1
   close_msg_db -file init_design.pb
 } RESULT]

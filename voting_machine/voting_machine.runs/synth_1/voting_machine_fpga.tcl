@@ -21,18 +21,18 @@ create_project -in_memory -part xc7a100tcsg324-1
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir D:/Code/CMPE-125/voting_machine2/voting_machine2.cache/wt [current_project]
-set_property parent.project_path D:/Code/CMPE-125/voting_machine2/voting_machine2.xpr [current_project]
+set_property webtalk.parent_dir D:/Code/CMPE-125/voting_machine/voting_machine.cache/wt [current_project]
+set_property parent.project_path D:/Code/CMPE-125/voting_machine/voting_machine.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo d:/Code/CMPE-125/voting_machine2/voting_machine2.cache/ip [current_project]
+set_property ip_output_repo d:/Code/CMPE-125/voting_machine/voting_machine.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib {
-  D:/Code/CMPE-125/voting_machine2/voting_machine2.srcs/sources_1/new/bcd_to_7seg.v
-  D:/Code/CMPE-125/voting_machine2/voting_machine2.srcs/sources_1/new/clk_gen.v
-  D:/Code/CMPE-125/voting_machine2/voting_machine2.srcs/sources_1/new/led_mux.v
-  D:/Code/CMPE-125/voting_machine2/voting_machine2.srcs/sources_1/new/voting_rule.v
-  D:/Code/CMPE-125/voting_machine2/voting_machine2.srcs/sources_1/new/voting_machine_fpga.v
+  D:/Code/CMPE-125/voting_machine/voting_machine.srcs/sources_1/new/bcd_to_7seg.v
+  D:/Code/CMPE-125/voting_machine/voting_machine.srcs/sources_1/new/clk_gen.v
+  D:/Code/CMPE-125/voting_machine/voting_machine.srcs/sources_1/new/led_mux.v
+  D:/Code/CMPE-125/voting_machine/voting_machine.srcs/sources_1/new/voting_rule.v
+  D:/Code/CMPE-125/voting_machine/voting_machine.srcs/sources_1/new/voting_machine_fpga.v
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -42,8 +42,8 @@ read_verilog -library xil_defaultlib {
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc D:/Code/CMPE-125/voting_machine2/voting_machine2.srcs/constrs_1/new/voting_machine_fpga.xdc
-set_property used_in_implementation false [get_files D:/Code/CMPE-125/voting_machine2/voting_machine2.srcs/constrs_1/new/voting_machine_fpga.xdc]
+read_xdc D:/Code/CMPE-125/voting_machine/voting_machine.srcs/constrs_1/new/voting_machine_fpga.xdc
+set_property used_in_implementation false [get_files D:/Code/CMPE-125/voting_machine/voting_machine.srcs/constrs_1/new/voting_machine_fpga.xdc]
 
 
 synth_design -top voting_machine_fpga -part xc7a100tcsg324-1
